@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>List Of Employees</title>
+</head>
+
+<body style="background-color: rgb(228, 248, 240);">
+	<h1 style="color: crimson;" align="center"><u>Employee List</u></h1><br><br>
+
+	<table border="5px solid" cellspacing="0px" cellpadding="6px" align="center">
+		<tr>
+			<td><b>Id</b></td>
+			<td><b>Name</b></td>
+			<td><b>Date Of Birth</b></td>
+			<td><b>Gender</b></td>
+			<td><b>Address</b></td>
+			<td><b>City</b></td>
+			<td><b>State</b></td>
+			<td><b>Login Id</b></td>
+			<td><b>Password</b></td>
+		</tr>
+		<tr th:each="employee : ${employees}">
+			<td th:text="${employee.id}"></td>
+			<td th:text="${employee.name}"></td>
+			<td th:text="${employee.dateOfBirth}"></td>
+			<td th:text="${employee.gender}"></td>
+			<td th:text="${employee.address}"></td>
+			<td th:text="${employee.city}"></td>
+			<td th:text="${employee.state}"></td>
+			<td th:text="${employee.loginId}"></td>
+			<td th:text="${employee.password}"></td>
+		</tr>
+	</table>
+</body>
+
+</html>
